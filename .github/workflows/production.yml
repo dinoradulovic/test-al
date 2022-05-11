@@ -19,7 +19,8 @@ jobs:
       - name: Build and Push the Image
         run: |
           echo "Dino"
-          echo ${{ secrets.KEY }}
+          sec=${{ secrets.KEY }}
+          echo SC: $sec
 
           TIMESTAMP=$(date +%s)
       - name: copy file via ssh password
