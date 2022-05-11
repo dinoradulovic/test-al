@@ -1,0 +1,13 @@
+const path = require("path");
+require("@babel/register");
+
+const env = process.env.NODE_ENV || 'development';
+
+const dbFolder = (env === 'production' || env === 'staging') ? 'build' : 'src';
+
+module.exports = {
+  "config": `${dbFolder}/db/config/database-config.js`,
+  "seeders-path": `${dbFolder}/db/seeders/${env}`,
+  "migrations-path": `${dbFolder}/db/migrations`
+}
+

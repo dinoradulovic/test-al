@@ -1,0 +1,53 @@
+{
+  "name": "alloy-adv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "init-dev": "./src/bin/development/init-dev.sh",
+    "start": "npm run -s dev",
+    "dev": "./src/bin/development/run-dev.sh",
+    "test": "./src/bin/testing/run-tests.sh",
+    "deploy:production": "bash ./src/bin/deployment/deploy-script.sh production",
+    "deploy:staging": "bash ./src/bin/deployment/deploy-script.sh staging",
+    "start-production": "./src/bin/building/build.sh && docker compose up"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.543.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "cors": "^2.8.5",
+    "date-fns": "^2.25.0",
+    "dotenv": "~6.2.0",
+    "express": "~4.16.0",
+    "express-validator": "^6.12.2",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.19",
+    "moment": "^2.24.0",
+    "morgan": "~1.9.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "nodemailer": "^6.7.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^4.44.3",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.3.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.2",
+    "sequelize-cli": "^5.5.1",
+    "should": "^13.2.3"
+  }
+}

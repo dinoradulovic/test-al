@@ -1,0 +1,10 @@
+node_modules
+dist
+*.env
+
+# ignore test logs, leave the folder
+/src/testing/logs/*
+!/src/testing/logs/.gitkeep 
+
+# ignore vscode
+.vscode/

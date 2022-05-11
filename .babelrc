@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/transform-runtime"
+  ],
+  "env": {
+    "development": { // ignore these paths when building the app (./src -> ./dist)
+      "ignore": [
+        "./src/bin/deployment",
+        "./src/testing",
+        "./src/features/**/tests"
+      ]
+    }
+  }
+}
