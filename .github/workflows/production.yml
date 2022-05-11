@@ -24,7 +24,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::386698934404:role/GitHubActionRole
+          role-to-assume: arn:aws:iam::386698934404:role/GithubActionsRole
           aws-region: eu-central-1
       - name: Get Github action IP
         id: ip
