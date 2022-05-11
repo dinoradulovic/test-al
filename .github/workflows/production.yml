@@ -18,7 +18,7 @@ jobs:
           path: app-test
       - name: Build and Push the Image
         run: |
-          ls 
+          echo ${{ secrets.KEY }}
 
           TIMESTAMP=$(date +%s)
       - name: copy file via ssh password
