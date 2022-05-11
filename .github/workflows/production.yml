@@ -15,10 +15,19 @@ jobs:
       - name: Checkout app
         uses: actions/checkout@v2
         with:
-          path: app
+          path: app-test
       - name: Build and Push the Image
         run: |
           ls 
 
           TIMESTAMP=$(date +%s)
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: 22
+          key: ${{ secrets.KEY }}
+          source: "./app-test"
+          target: "test"
           
