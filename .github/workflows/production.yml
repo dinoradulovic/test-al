@@ -18,10 +18,6 @@ jobs:
           path: app-test
       - name: Build and Push the Image
         run: |
-          echo "Dino"
-          sec=${{ secrets.KEY }}
-          echo SC: $sec
-
           TIMESTAMP=$(date +%s)
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
